@@ -1,0 +1,34 @@
+==========binder bindRule
+
+if(prepremises.toLowerCase().contains("ET".toLowerCase())){
+                    String[] pre = prepremises.split("ET");
+                    for (String p: pre){
+                        //if( !p.toLowerCase().contains("NON".toLowerCase()) ){
+                        String pp = p.replace(" ","");
+                        premises.add(pp);
+                        //}
+
+                    }
+                }
+                else{
+                    premises.add(prepremises);
+                }
+
+                //test if "ET" is in conclusions
+                //if()
+                String preconclusions=_line.substring(_line.lastIndexOf(">") + 1);
+                List<String> conclusions = new ArrayList<String>();
+                if(preconclusions.toLowerCase().contains("ET".toLowerCase())){
+                    String[] pre = preconclusions.split("ET");
+                    for (String p: pre){
+                        String pp = p.replace(" ","");
+                        conclusions.add(pp);
+                    }
+                }
+                else{
+                    conclusions.add(preconclusions);
+                }
+
+                Dans la base de faits au départ on a (0,0)
+                But1: (2,0)
+                But2 : (2, ?n)
